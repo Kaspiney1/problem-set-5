@@ -27,6 +27,31 @@ function mario() {
   ////////////// DO NOT MODIFY
 
   // WRITE YOUR EXERCISE 1 CODE HERE
+  let hashSymbol = '#';
+   let spaceSymbol = '&nbsp'
+   let linesN = '';
+   while(true) {
+     height = Number(prompt("Enter An Integer Between 1 And 23"));
+     if(height >= 1 && height <= 23 && Number.isInteger(height)) {
+       for(let a=0; a<height; a++) {
+
+         for(let b=0; b<=(height-2-a);b++) {
+           linesN = linesN + spaceSymbol;
+         }
+
+         for(let c=0; c<=(1+a);c++) {
+           linesN = linesN + hashSymbol;
+         }
+
+         linesN = linesN + "<br>";
+       }
+       let div1=document.getElementById("mario-easy-output")
+       div1.innerHTML="<code>"+linesN+"</code>";
+       break;
+     }
+
+   }
+
 
   ////////////////////////// DO NOT MODIFY
   check('mario', height); // DO NOT MODIFY
@@ -62,6 +87,32 @@ function marioAgain() {
   ////////////// DO NOT MODIFY
 
   // WRITE YOUR EXERCISE 2 CODE HERE
+  let hashSymbol = '##';
+   let spaceSymbol = '&nbsp;'
+   let linesN = '';
+   while(true) {
+     height = Number(prompt("Enter An Integer Between 1 And 23"));
+     if(height >= 1 && height <= 23 && Number.isInteger(height)) {
+       for(let a=0; a<height; a++) {
+
+         for(let b=0; b<=(height-2-a);b++) {
+           linesN = linesN + spaceSymbol;
+         }
+
+         for(let c=0; c<=(1+a);c++) {
+           linesN = linesN + hashSymbol;
+         }
+         linesN = linesN + spaceSymbol + spaceSymbol;
+
+         linesN = linesN + "<br>";
+       }
+       let div2=document.getElementById("mario-hard-output")
+       div2.innerHTML="<code>"+linesN+"</code>";
+       break;
+     }
+
+   }
+
 
   //////////////////////////////// DO NOT MODIFY
   check('mario-again', height); // DO NOT MODIFY
@@ -189,6 +240,50 @@ function hurricane() {
   ///////////////// DO NOT MODIFY
   let windspeed; // DO NOT MODIFY
   ///////////////// DO NOT MODIFY
+  windspeed = prompt('Please enter a positive integer for your windspeed');
+
+ windspeed = parseInt(windspeed);
+
+ while (windspeed < 0) {
+   windspeed = prompt('Please enter a positive integer for your windspeed');
+   windspeed = parseInt(windspeed);
+ }
+
+
+ while (Number.isInteger(windspeed) == false) {
+   windspeed = prompt('Please enter a positive integer for your windspeed');
+   windspeed = parseInt(windspeed);
+
+ }
+ console.log(windspeed)
+
+
+ if(windspeed >= 157) {
+   document.getElementById("hurricane-output").innerHTML = "Category 5 Hurricane."
+ }
+
+ if(windspeed >= 130 && windspeed <= 156){
+     document.getElementById("hurricane-output").innerHTML = "Category 4 Hurricane."
+ }
+
+ if (windspeed >= 111 && windspeed < 129)[
+   document.getElementById("hurricane-output").innerHTML = "Category 3 Hurricane."
+ ]
+
+ if (windspeed >= 96 && windspeed < 110){
+   document.getElementById("hurricane-output").innerHTML = "Category 2 Hurricane."
+ }
+
+ if (windspeed >= 74 && windspeed < 95){
+   document.getElementById("hurricane-output").innerHTML = "Category 1 Hurricane."
+ }
+
+ if (windspeed >= 39 && windspeed < 73){
+   document.getElementById("hurricane-output").innerHTML = "Tropical Storm."
+ }
+ if(windspeed < 39){
+   document.getElementById("hurricane-output").innerHTML = "The skies are calm..."
+ }
 
   ///////////////////////////////// DO NOT MODIFY
   check('hurricane', windspeed); // DO NOT MODIFY
