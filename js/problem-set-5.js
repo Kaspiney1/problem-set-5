@@ -240,6 +240,7 @@ function hurricane() {
   ///////////////// DO NOT MODIFY
   let windspeed; // DO NOT MODIFY
   ///////////////// DO NOT MODIFY
+<<<<<<< HEAD
   windspeed = prompt('Please enter a positive integer for your windspeed');
 
  windspeed = parseInt(windspeed);
@@ -285,6 +286,9 @@ function hurricane() {
    document.getElementById("hurricane-output").innerHTML = "The skies are calm..."
  }
 
+=======
+  let 
+>>>>>>> 9d1986fb4448550762595fc1796fcfda20f37206
   ///////////////////////////////// DO NOT MODIFY
   check('hurricane', windspeed); // DO NOT MODIFY
   ///////////////////////////////// DO NOT MODIFY
