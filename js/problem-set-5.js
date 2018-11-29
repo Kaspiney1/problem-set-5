@@ -26,7 +26,7 @@ function mario() {
   let height; // DO NOT MODIFY
   ////////////// DO NOT MODIFY
 
-  // WRITE YOUR EXERCISE 1 CODE HERE
+  /// WRITE YOUR EXERCISE 1 CODE HERE
   let hashSymbol = '#';
     let spaceSymbol = '&nbsp'
     let linesN = '';
